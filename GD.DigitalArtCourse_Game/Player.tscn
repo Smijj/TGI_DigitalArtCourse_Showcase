@@ -1,12 +1,12 @@
 [gd_scene load_steps=20 format=3 uid="uid://227rii7h7lnk"]
 
 [ext_resource type="Script" uid="uid://nataxur0auyb" path="res://Scripts/CharCtrl.gd" id="1_dtqjt"]
-[ext_resource type="Texture2D" uid="uid://uetclrp5xa7c" path="res://Declan/Ferret_Idle.png" id="2_5ncpa"]
-[ext_resource type="Texture2D" uid="uid://dyfucst3edykc" path="res://Declan/Ferret_Run.png" id="3_wi0c6"]
-[ext_resource type="Texture2D" uid="uid://dx135fxut67ir" path="res://Jeri/MainChar.png" id="4_hp6x6"]
-[ext_resource type="Texture2D" uid="uid://bjah1n3i4fdp2" path="res://Lisa/batty_run.png" id="5_3tkgg"]
-[ext_resource type="Texture2D" uid="uid://b0msdo5ym5nv2" path="res://Tim/Sprite-char.png" id="6_l6ohk"]
-[ext_resource type="Texture2D" uid="uid://cc3c4pdysw4nl" path="res://Bianca/brain character .png" id="7_oudfo"]
+[ext_resource type="Texture2D" uid="uid://uetclrp5xa7c" path="res://Assets/Declan/Ferret_Idle.png" id="2_5ncpa"]
+[ext_resource type="Texture2D" uid="uid://dyfucst3edykc" path="res://Assets/Declan/Ferret_Run.png" id="3_wi0c6"]
+[ext_resource type="Texture2D" uid="uid://dx135fxut67ir" path="res://Assets/Jeri/MainChar.png" id="4_hp6x6"]
+[ext_resource type="Texture2D" uid="uid://bjah1n3i4fdp2" path="res://Assets/Lisa/batty_run.png" id="5_3tkgg"]
+[ext_resource type="Texture2D" uid="uid://b0msdo5ym5nv2" path="res://Assets/Tim/Sprite-char.png" id="6_l6ohk"]
+[ext_resource type="Texture2D" uid="uid://cc3c4pdysw4nl" path="res://Assets/Bianca/brain character .png" id="7_oudfo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_03owx"]
 radius = 7.5

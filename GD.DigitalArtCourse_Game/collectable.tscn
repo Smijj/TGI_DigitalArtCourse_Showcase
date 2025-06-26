@@ -1,15 +1,15 @@
 [gd_scene load_steps=15 format=3 uid="uid://bbwxc2srmy8in"]
 
 [ext_resource type="Script" uid="uid://bub14jdqei332" path="res://Scripts/collectable.gd" id="1_wufoi"]
-[ext_resource type="Texture2D" uid="uid://dwu8u2y314dkf" path="res://Lisa/button.png" id="2_13ywj"]
+[ext_resource type="Texture2D" uid="uid://dwu8u2y314dkf" path="res://Assets/Lisa/button.png" id="2_13ywj"]
 [ext_resource type="Script" uid="uid://bjsffhro4v1w7" path="res://Scripts/sprite2D_switcher.gd" id="3_hh81w"]
-[ext_resource type="Texture2D" uid="uid://cvctki80oshwx" path="res://Lisa/banana.png" id="4_umsaa"]
-[ext_resource type="Texture2D" uid="uid://d4bjx8wp0l6vk" path="res://Declan/Collectable.png" id="5_13ywj"]
-[ext_resource type="Texture2D" uid="uid://bct5c6vswfc14" path="res://Lisa/mango.png" id="5_im75l"]
-[ext_resource type="Texture2D" uid="uid://d4asd0560ukyt" path="res://Lisa/papaya.png" id="6_1wmkg"]
-[ext_resource type="Texture2D" uid="uid://kpuqsafkybgi" path="res://Lisa/pineapple.png" id="7_wqvtp"]
-[ext_resource type="Texture2D" uid="uid://dpovb6abooqh3" path="res://Lisa/ripster.png" id="8_c5kjq"]
-[ext_resource type="Texture2D" uid="uid://ba78sf112tqbq" path="res://Tim/Tim2.png" id="10_hh81w"]
+[ext_resource type="Texture2D" uid="uid://cvctki80oshwx" path="res://Assets/Lisa/banana.png" id="4_umsaa"]
+[ext_resource type="Texture2D" uid="uid://d4bjx8wp0l6vk" path="res://Assets/Declan/Collectable.png" id="5_13ywj"]
+[ext_resource type="Texture2D" uid="uid://bct5c6vswfc14" path="res://Assets/Lisa/mango.png" id="5_im75l"]
+[ext_resource type="Texture2D" uid="uid://d4asd0560ukyt" path="res://Assets/Lisa/papaya.png" id="6_1wmkg"]
+[ext_resource type="Texture2D" uid="uid://kpuqsafkybgi" path="res://Assets/Lisa/pineapple.png" id="7_wqvtp"]
+[ext_resource type="Texture2D" uid="uid://dpovb6abooqh3" path="res://Assets/Lisa/ripster.png" id="8_c5kjq"]
+[ext_resource type="Texture2D" uid="uid://ba78sf112tqbq" path="res://Assets/Tim/Tim2.png" id="10_hh81w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2ibq"]
 size = Vector2(16, 45.469)

@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=9 format=3 uid="uid://3h16y3fcjh3j"]
 
-[ext_resource type="Texture2D" uid="uid://dyusq46pht4eu" path="res://Tim/Tileset.png" id="1_c5hn2"]
-[ext_resource type="Texture2D" uid="uid://q23asxpddvdi" path="res://Bianca/Tileset.png" id="2_w26hy"]
-[ext_resource type="Texture2D" uid="uid://bda8ypawlc42j" path="res://Bianca/tree tall.png" id="3_5svu2"]
-[ext_resource type="Texture2D" uid="uid://bv5nmekbatmfs" path="res://Bianca/bridge .png" id="4_w26hy"]
+[ext_resource type="Texture2D" uid="uid://dyusq46pht4eu" path="res://Assets/Tim/Tileset.png" id="1_w26hy"]
+[ext_resource type="Texture2D" uid="uid://q23asxpddvdi" path="res://Assets/Bianca/Tileset.png" id="2_5svu2"]
+[ext_resource type="Texture2D" uid="uid://bda8ypawlc42j" path="res://Assets/Bianca/tree tall.png" id="3_o0276"]
+[ext_resource type="Texture2D" uid="uid://bv5nmekbatmfs" path="res://Assets/Bianca/bridge .png" id="4_xoxgx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o0276"]
-texture = ExtResource("1_c5hn2")
+texture = ExtResource("1_w26hy")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -29,7 +29,7 @@ texture = ExtResource("1_c5hn2")
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoxgx"]
-texture = ExtResource("2_w26hy")
+texture = ExtResource("2_5svu2")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -51,15 +51,15 @@ texture = ExtResource("2_w26hy")
 4:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbmmw"]
-texture = ExtResource("3_5svu2")
+texture = ExtResource("3_o0276")
 0:0/size_in_atlas = Vector2i(5, 6)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5svu2"]
-texture = ExtResource("4_w26hy")
+texture = ExtResource("4_xoxgx")
 0:0/size_in_atlas = Vector2i(4, 2)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32.5, 11, 32.5, 11, 33, 16, -32.5, 16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 8, 32, 8, 32, 16, -32, 16)
 
 [resource]
 physics_layer_0/collision_layer = 1
