@@ -1,0 +1,42 @@
+[gd_scene load_steps=11 format=3 uid="uid://yto533xqvahp"]
+
+[ext_resource type="Script" uid="uid://ft1gyc0d7di" path="res://Scripts/collectables_counter.gd" id="1_k1pai"]
+[ext_resource type="Texture2D" uid="uid://dwu8u2y314dkf" path="res://Lisa/button.png" id="2_axji4"]
+[ext_resource type="Script" uid="uid://bfyyk64jbobiv" path="res://Scripts/TextureRect_switcher.gd" id="3_drcj0"]
+[ext_resource type="Texture2D" uid="uid://cvctki80oshwx" path="res://Lisa/banana.png" id="4_7wlhi"]
+[ext_resource type="Texture2D" uid="uid://d4bjx8wp0l6vk" path="res://Declan/Collectable.png" id="5_axji4"]
+[ext_resource type="Texture2D" uid="uid://bct5c6vswfc14" path="res://Lisa/mango.png" id="5_nrn6i"]
+[ext_resource type="Texture2D" uid="uid://d4asd0560ukyt" path="res://Lisa/papaya.png" id="6_3tted"]
+[ext_resource type="Texture2D" uid="uid://kpuqsafkybgi" path="res://Lisa/pineapple.png" id="7_ws0ck"]
+[ext_resource type="Texture2D" uid="uid://dpovb6abooqh3" path="res://Lisa/ripster.png" id="8_l1an4"]
+[ext_resource type="Texture2D" uid="uid://ba78sf112tqbq" path="res://Tim/Tim2.png" id="10_drcj0"]
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="CollectablesCounter" type="PanelContainer" parent="." node_paths=PackedStringArray("label")]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 117.0
+offset_bottom = 68.0
+script = ExtResource("1_k1pai")
+label = NodePath("CollectableCounter/Label")
+
+[node name="CollectableCounter" type="HBoxContainer" parent="CollectablesCounter"]
+texture_filter = 1
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CollectablesCounter/CollectableCounter"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_axji4")
+expand_mode = 2
+stretch_mode = 5
+script = ExtResource("3_drcj0")
+_sprites = Array[Texture2D]([ExtResource("2_axji4"), ExtResource("4_7wlhi"), ExtResource("5_axji4"), ExtResource("5_nrn6i"), ExtResource("6_3tted"), ExtResource("7_ws0ck"), ExtResource("8_l1an4"), ExtResource("10_drcj0")])
+_switch_time = 1.5
+
+[node name="Label" type="Label" parent="CollectablesCounter/CollectableCounter"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "0"

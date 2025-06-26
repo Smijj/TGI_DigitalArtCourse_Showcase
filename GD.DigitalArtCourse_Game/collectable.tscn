@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://bbwxc2srmy8in"]
+
+[ext_resource type="Script" uid="uid://bub14jdqei332" path="res://Scripts/collectable.gd" id="1_wufoi"]
+[ext_resource type="Texture2D" uid="uid://dwu8u2y314dkf" path="res://Lisa/button.png" id="2_13ywj"]
+[ext_resource type="Script" uid="uid://bjsffhro4v1w7" path="res://Scripts/sprite2D_switcher.gd" id="3_hh81w"]
+[ext_resource type="Texture2D" uid="uid://cvctki80oshwx" path="res://Lisa/banana.png" id="4_umsaa"]
+[ext_resource type="Texture2D" uid="uid://d4bjx8wp0l6vk" path="res://Declan/Collectable.png" id="5_13ywj"]
+[ext_resource type="Texture2D" uid="uid://bct5c6vswfc14" path="res://Lisa/mango.png" id="5_im75l"]
+[ext_resource type="Texture2D" uid="uid://d4asd0560ukyt" path="res://Lisa/papaya.png" id="6_1wmkg"]
+[ext_resource type="Texture2D" uid="uid://kpuqsafkybgi" path="res://Lisa/pineapple.png" id="7_wqvtp"]
+[ext_resource type="Texture2D" uid="uid://dpovb6abooqh3" path="res://Lisa/ripster.png" id="8_c5kjq"]
+[ext_resource type="Texture2D" uid="uid://ba78sf112tqbq" path="res://Tim/Tim2.png" id="10_hh81w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2ibq"]
+size = Vector2(16, 45.469)
+
+[sub_resource type="Animation" id="Animation_wufoi"]
+resource_name = "Collectable_Idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.99, 3.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 15), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_13ywj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hh81w"]
+_data = {
+&"Collectable_Idle": SubResource("Animation_wufoi"),
+&"RESET": SubResource("Animation_13ywj")
+}
+
+[node name="Collectable" type="Area2D"]
+texture_filter = 1
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_wufoi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15.2655)
+shape = SubResource("RectangleShape2D_c2ibq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_13ywj")
+script = ExtResource("3_hh81w")
+_sprites = Array[Texture2D]([ExtResource("2_13ywj"), ExtResource("4_umsaa"), ExtResource("5_13ywj"), ExtResource("5_im75l"), ExtResource("6_1wmkg"), ExtResource("7_wqvtp"), ExtResource("8_c5kjq"), ExtResource("10_hh81w")])
+_switch_time = 1.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hh81w")
+}
+autoplay = "Collectable_Idle"

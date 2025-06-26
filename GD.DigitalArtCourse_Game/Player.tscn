@@ -1,0 +1,168 @@
+[gd_scene load_steps=20 format=3 uid="uid://227rii7h7lnk"]
+
+[ext_resource type="Script" uid="uid://nataxur0auyb" path="res://Scripts/CharCtrl.gd" id="1_dtqjt"]
+[ext_resource type="Texture2D" uid="uid://uetclrp5xa7c" path="res://Declan/Ferret_Idle.png" id="2_5ncpa"]
+[ext_resource type="Texture2D" uid="uid://dyfucst3edykc" path="res://Declan/Ferret_Run.png" id="3_wi0c6"]
+[ext_resource type="Texture2D" uid="uid://dx135fxut67ir" path="res://Jeri/MainChar.png" id="4_hp6x6"]
+[ext_resource type="Texture2D" uid="uid://bjah1n3i4fdp2" path="res://Lisa/batty_run.png" id="5_3tkgg"]
+[ext_resource type="Texture2D" uid="uid://b0msdo5ym5nv2" path="res://Tim/Sprite-char.png" id="6_l6ohk"]
+[ext_resource type="Texture2D" uid="uid://cc3c4pdysw4nl" path="res://Bianca/brain character .png" id="7_oudfo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_03owx"]
+radius = 7.5
+height = 15.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0du0"]
+atlas = ExtResource("2_5ncpa")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm0pq"]
+atlas = ExtResource("2_5ncpa")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fos0i"]
+atlas = ExtResource("3_wi0c6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dxm6"]
+atlas = ExtResource("3_wi0c6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fos0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0du0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cm0pq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fos0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dxm6")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5vvyt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hp6x6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4qnp"]
+atlas = ExtResource("5_3tkgg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpfj3"]
+atlas = ExtResource("5_3tkgg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c6i3y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4qnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpfj3")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4qnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpfj3")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c2ibq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_l6ohk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fpfj3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_oudfo")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" node_paths=PackedStringArray("_char_sprites")]
+texture_filter = 1
+collision_layer = 2
+script = ExtResource("1_dtqjt")
+_speed = 400.0
+_jump_velocity = 500.0
+_char_sprites = [NodePath("Declan"), NodePath("Jeri"), NodePath("Lisa"), NodePath("Tim"), NodePath("Bianca")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_03owx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -63)
+
+[node name="Declan" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-6, -32)
+sprite_frames = SubResource("SpriteFrames_fos0i")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Jeri" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_5vvyt")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Lisa" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_c6i3y")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Tim" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_c2ibq")
+animation = &"Idle"
+
+[node name="Bianca" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_fpfj3")
+animation = &"Idle"
